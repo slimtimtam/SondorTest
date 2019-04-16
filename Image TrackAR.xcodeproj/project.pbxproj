@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126ACB732264C492002F7D40 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 126ACB722264C492002F7D40 /* video.mp4 */; };
 		AAD49AE22155C80A0047A13E /* particle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = AAD49AE12155C8090047A13E /* particle.scnp */; };
 		AADCC0382155B61900F2FD06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADCC0372155B61900F2FD06 /* AppDelegate.swift */; };
 		AADCC03A2155B61900F2FD06 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AADCC0392155B61900F2FD06 /* art.scnassets */; };
@@ -14,11 +15,12 @@
 		AADCC03F2155B61900F2FD06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADCC03D2155B61900F2FD06 /* Main.storyboard */; };
 		AADCC0412155B61C00F2FD06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADCC0402155B61C00F2FD06 /* Assets.xcassets */; };
 		AADCC0442155B61C00F2FD06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADCC0422155B61C00F2FD06 /* LaunchScreen.storyboard */; };
-		AAE7F8A22155B692006B8EBB /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAE7F8A12155B692006B8EBB /* video.mp4 */; };
+		AAE7F8A22155B692006B8EBB /* test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AAE7F8A12155B692006B8EBB /* test.mp4 */; };
 		AAE7F8A42155B6A6006B8EBB /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE7F8A32155B6A6006B8EBB /* cross.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		126ACB722264C492002F7D40 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video.mp4; path = ../../../video.mp4; sourceTree = "<group>"; };
 		AAD49AE12155C8090047A13E /* particle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = particle.scnp; sourceTree = "<group>"; };
 		AADCC0342155B61900F2FD06 /* Image TrackAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image TrackAR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADCC0372155B61900F2FD06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +30,7 @@
 		AADCC0402155B61C00F2FD06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AADCC0432155B61C00F2FD06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AADCC0452155B61C00F2FD06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAE7F8A12155B692006B8EBB /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		AAE7F8A12155B692006B8EBB /* test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.mp4; sourceTree = "<group>"; };
 		AAE7F8A32155B6A6006B8EBB /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +64,8 @@
 		AADCC0362155B61900F2FD06 /* Image TrackAR */ = {
 			isa = PBXGroup;
 			children = (
-				AAE7F8A12155B692006B8EBB /* video.mp4 */,
+				AAE7F8A12155B692006B8EBB /* test.mp4 */,
+				126ACB722264C492002F7D40 /* video.mp4 */,
 				AADCC0372155B61900F2FD06 /* AppDelegate.swift */,
 				AADCC0392155B61900F2FD06 /* art.scnassets */,
 				AADCC03B2155B61900F2FD06 /* ViewController.swift */,
@@ -136,11 +139,12 @@
 			files = (
 				AAE7F8A42155B6A6006B8EBB /* cross.png in Resources */,
 				AADCC03A2155B61900F2FD06 /* art.scnassets in Resources */,
-				AAE7F8A22155B692006B8EBB /* video.mp4 in Resources */,
+				AAE7F8A22155B692006B8EBB /* test.mp4 in Resources */,
 				AADCC0442155B61C00F2FD06 /* LaunchScreen.storyboard in Resources */,
 				AADCC0412155B61C00F2FD06 /* Assets.xcassets in Resources */,
 				AAD49AE22155C80A0047A13E /* particle.scnp in Resources */,
 				AADCC03F2155B61900F2FD06 /* Main.storyboard in Resources */,
+				126ACB732264C492002F7D40 /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,13 +303,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5HBUC72FDQ;
 				INFOPLIST_FILE = "Image TrackAR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.madebyyuma.Image-TrackAR";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taralaughlin.Image-TrackAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,13 +321,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5HBUC72FDQ;
 				INFOPLIST_FILE = "Image TrackAR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.madebyyuma.Image-TrackAR";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.taralaughlin.Image-TrackAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

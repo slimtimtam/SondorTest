@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "you-just-got-rickrolled.jpg"
+      "filename" : "maya.png"
     }
   ],
   "info" : {
@@ -10,7 +10,7 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 99999999999,
-    "unit" : "yards"
+    "width" : 10,
+    "unit" : "inches"
   }
 }

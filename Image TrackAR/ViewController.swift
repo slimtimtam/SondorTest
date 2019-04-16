@@ -52,6 +52,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
+        if let playerItem: AVPlayerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTime.zero)
+        }
+    }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard anchor is ARImageAnchor else { return }
@@ -66,7 +71,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let videoURL = Bundle.main.url(forResource: "video", withExtension: "mp4")!
         let videoPlayer = AVPlayer(url: videoURL)
         
-        let videoScene = SKScene(size: CGSize(width: 720.0, height: 1280.0))
+        //audio test
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+        }
+        catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
+        //end audio test
+        let videoScene = SKScene(size: CGSize(width: 720.0, height: 1080.0))
         
         let videoNode = SKVideoNode(avPlayer: videoPlayer)
         videoNode.position = CGPoint(x: videoScene.size.width / 2, y: videoScene.size.height / 2)
@@ -81,19 +94,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Animations
         guard let videoContainer = container.childNode(withName: "videoContainer", recursively: false) else { return }
-        guard let text = container.childNode(withName: "text", recursively: false) else { return }
-        guard let textTwitter = container.childNode(withName: "textTwitter", recursively: false) else { return }
+        //loop
+        videoPlayer.actionAtItemEnd = .none
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(ViewController.playerItemDidReachEnd),
+            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: videoPlayer.currentItem)
         
         videoContainer.runAction(SCNAction.sequence([SCNAction.wait(duration: 1.0), SCNAction.scale(to: 1.0, duration: 0.5)]))
-        text.runAction(SCNAction.sequence([SCNAction.wait(duration: 1.5), SCNAction.scale(to: 0.01, duration: 0.5)]))
-        textTwitter.runAction(SCNAction.sequence([SCNAction.wait(duration: 2.0), SCNAction.scale(to: 0.006, duration: 0.5)]))
-        
-        // Particlez!!!
-        let particle = SCNParticleSystem(named: "particle.scnp", inDirectory: nil)!
-        let particleNode = SCNNode()
-        
-        container.addChildNode(particleNode)
-        particleNode.addParticleSystem(particle)
+
     }
     
     override var prefersStatusBarHidden: Bool {
